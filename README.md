@@ -1,7 +1,9 @@
 # Cambiar Mac En Windows
 
 ## Descripción
-Este proyecto permite cambiar la dirección MAC en Windows mediante un script .bat que presenta un menú interactivo para facilitar el proceso.
+Este proyecto se exploraran dos metodos para cambiar la direccion MAC en Windows:
+1. Cambio manual de la direccion MAC
+2. Cambio de la dirección MAC mediante un script .bat que presenta un menú interactivo que simplifique el proceso.
 
 ## Características
 
@@ -9,7 +11,29 @@ Este proyecto permite cambiar la dirección MAC en Windows mediante un script .b
 - **Direcciones MAC Predefinidas**: El menú incluye opciones con direcciones MAC predefinidas.predefinidas.
 - **Ingreso Manual**:  También se puede ingresar manualmente una dirección MAC siguiendo el formato requerido.
 
-## Codigo
+
+## Cambio manual de la MAC
+
+Con los siguientes pasos es posible cambiar la dirrecion MAC del equipo manualmente
+
+1. Entrar a Administrador de Dispositivos.
+2. Seleccionar el apartado de Adaptadores de Red.
+3. Escogemos la interfaz de red a la que queremos cambiar la dirección MAC.
+4. Hacemos clic derecho en lo escogido y seleccionamos la opción «Propiedades«. 
+
+   <img src="./aDispositivos.jpg" width="400" height="300">
+5. Pasamos a la pestaña «Opciones Avanzadas«, luego en el apartado de «Propiedad» nos encontraremos con Direcciones Administradas Localmente, Locally Administered Address o como en este caso direccion de red
+6. Fíjate en el campo de texto (Valor) en donde se encuentra la dirección MAC
+
+   <img src="./cambiarMacAdministrador.jpg" width="400" height="300">
+7. Acto seguido, introduce la dirección MAC de tu preferencia, respetando el formato y sin separadores/espacios.
+8. Reinicia el ordenador
+
+
+
+## Cambio mediante script
+
+Codigo
 
     @echo off
     setlocal EnableDelayedExpansion
@@ -134,7 +158,7 @@ A partir de esta parte la ruta del registro puede cambiar ligeramente dependiend
 
 ### Explorar las Subclaves (0000, 0001, 0002, etc.):
 
--Dentro de {4D36E972-E325-11CE-BFC1-08002BE10318}, encontrarás varias subclaves numeradas (0000, 0001, 0002, etc.).
+- Dentro de {4D36E972-E325-11CE-BFC1-08002BE10318}, encontrarás varias subclaves numeradas (0000, 0001, 0002, etc.).
 Cada subclave representa un adaptador de red instalado en tu máquina.
 
 ### Identificar el Adaptador Correcto:
